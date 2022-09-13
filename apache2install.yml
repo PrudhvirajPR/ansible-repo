@@ -1,0 +1,16 @@
+---
+hosts: all
+become: yes
+become_method: sudo
+tasks:
+  - name: install apache2
+    apt:
+      name: httpd
+      state: present
+      update_cache: yes
+  - name: restart apache2
+    service:
+      name: httpd
+      state: restarted
+      update_cache: yes
+
