@@ -1,0 +1,11 @@
+---
+hosts: all
+gather_facts: no
+local_host: yes
+tasks:
+  - name: install apache
+    shell:
+      name: apache
+      state: present
+    
+  
